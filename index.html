@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Check Out Page</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="panel-container">
+        <div class="panel">
+          <div class="heading">Checkout</div>
+          <h2 class="panel__heading">Contact infomation</h2>
+
+          <form onsubmit="alert('Success')">
+            <div class="input">
+              <label for="email-address">Email</label>
+              <p>
+                <span class="material-icons"> email </span>
+                <input
+                  type="email"
+                  required
+                  id="email-address"
+                  placeholder="Enter your email..."
+                />
+              </p>
+            </div>
+
+            <div class="input">
+              <label for="phone-number">Phone</label>
+              <p>
+                <span class="material-icons"> call </span>
+                <input
+                  type="tel"
+                  required
+                  id="phone-number"
+                  placeholder="Enter your phone..."
+                />
+              </p>
+            </div>
+
+            <h2 class="panel__heading">Shipping address</h2>
+
+            <div class="input">
+              <label for="full-name">Full name</label>
+              <p>
+                <span class="material-icons"> account_circle </span>
+                <input type="text" required id="full-name" />
+              </p>
+            </div>
+
+            <div class="input">
+              <label for="Address">Address</label>
+              <p>
+                <span class="material-icons"> home </span>
+                <input
+                  type="text"
+                  required
+                  id="Address"
+                  placeholder="Your address.."
+                />
+              </p>
+            </div>
+
+            <div class="input">
+              <label for="city">City</label>
+              <p>
+                <span class="material-icons"> location_city </span>
+                <input
+                  type="text"
+                  required
+                  id="city"
+                  placeholder="Your city.."
+                />
+              </p>
+            </div>
+
+            <div class="country input">
+              <div class="dropdown">
+                <label>Country</label>
+                <span class="material-icons"> public </span>
+                <input
+                  list="countries"
+                  name="myCountry"
+                  required
+                  placeholder="Your country.."
+                />
+                <datalist id="countries">
+                  <option value="India"></option>
+                  <option value="United States"></option>
+                  <option value="United Kingdom"></option>
+                  <option value="Canada"></option>
+                  <option value="Australia"></option>
+                  <option value="Japan"></option>
+                </datalist>
+              </div>
+
+              <div class="input">
+                <label for="postalcode">Postal code</label>
+                <p>
+                  <span class="material-icons"> markunread_mailbox </span>
+                  <input
+                    type="text"
+                    required
+                    id="postalcode"
+                    placeholder="Your postal code.."
+                  />
+                </p>
+              </div>
+            </div>
+            <p class="save-info">
+              <input type="checkbox" name="saveinfo" id="saveinfo" />
+              <label for="saveinfo">Save this information for next time</label>
+            </p>
+            <button type="submit">Continue</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="cart-container">
+        <div class="card">
+          <!--product 1 details-->
+          <div class="product1">
+            <img src="img/photo1.png" alt="vintagebag" />
+            <div class="product_details">
+              <div class="product_name">Vintage Backbag</div>
+              <div class="sale-price">
+                $54.99
+                <span class="actual-price">$94.99</span>
+              </div>
+
+              <div class="quantity">
+                <button id="decrement-btn" type="button" name="button">
+                  <span class="material-icons-round"> remove </span>
+                </button>
+                <span id="count-display">1</span>
+                <button id="increment-btn" type="button" name="button">
+                  <span class="material-icons-round"> add </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--product 2 details-->
+          <div class="product2">
+            <img src="img/photo2.png" alt="vintagebag" />
+            <div class="product_details">
+              <div class="product_name">Levi Shoes</div>
+              <div class="sale-price">
+                $74.99
+                <span class="actual-price">$124.99</span>
+              </div>
+
+              <div class="quantity">
+                <button id="decrement-btn2" type="button" name="button">
+                  <span class="material-icons-round"> remove </span>
+                </button>
+
+                <span id="count-display2">1</span>
+                <button id="increment-btn2" type="button" name="button">
+                  <span class="material-icons-round"> add </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="shipping">
+            Shipping
+            <span>$19</span>
+          </div>
+          <div class="total">
+            Total
+            <span> $148.98 </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <span>created by <a href="">Manish Bhatta</a> - devChallenges.io</span>
+  </footer>
+  <script src="index.js"></script>
+</html>
